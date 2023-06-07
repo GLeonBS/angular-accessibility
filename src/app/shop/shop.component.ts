@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -33,7 +34,7 @@ export class ShopComponent implements OnInit {
   selectedFillings: string[] = [];                       
 
   // TODO: #11. Announce changes with LiveAnnouncer
-  constructor() { }
+  constructor(private liveAnnouncer: LiveAnnouncer) { }
 
   ngOnInit(): void { }
 
@@ -46,7 +47,7 @@ export class ShopComponent implements OnInit {
   }
 
   fauxPurchase(): void {
-    let flavor = '';
+    let flavor = '...';
 
     // TODO: #7. Create selectable controls with Angular Material
     this.selectedFillings.forEach(filling => {
@@ -54,6 +55,7 @@ export class ShopComponent implements OnInit {
     })
 
     const fakePurchase = `Purchase ${this.quantity} ${flavor}dumplings in the color ${this.color}!`;
+    this.liveAnnouncer.announce(fakePurchase);
     console.log(fakePurchase);
 
     // TODO: #11. Announce changes with LiveAnnouncer
