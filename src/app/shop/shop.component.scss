@@ -15,8 +15,9 @@
  */
 @use '@angular/material' as mat;
 
-// TODO: #12. Enable HighContrast mode
 
+// TODO: #12. Enable HighContrast mode
+@use '@angular/cdk';
 :host {
   display: flex;
   justify-content: center;
@@ -90,7 +91,10 @@
     background-color: mat.get-color-from-palette(mat.$pink-palette, A100);
 
     // TODO: #12. Enable HighContrast mode
-
+    @include cdk.high-contrast() {
+      outline: solid 1px;
+      background-color: mat.get-color-from-palette(mat.$pink-palette, 50);
+    }
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 12px;
@@ -110,5 +114,9 @@
     background-color: mat.get-color-from-palette(mat.$light-green-palette, A100);
 
     // TODO: #12. Enable HighContrast mode
+    @include cdk.high-contrast() {
+      outline: solid 1px;
+      background-color: mat.get-color-from-palette(mat.$light-green-palette, 50);
+    }
   }
 }
