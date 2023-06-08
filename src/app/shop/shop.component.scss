@@ -15,6 +15,11 @@
  */
 @use '@angular/material' as mat;
 
+<<<<<<< HEAD
+=======
+// TODO: #12. Enable HighContrast mode
+@use '@angular/cdk';
+>>>>>>> 709fc82883b9873a654697c15a2c2d45b0e409ff
 
 // TODO: #12. Enable HighContrast mode
 @use '@angular/cdk';
@@ -63,15 +68,6 @@
       flex-grow: 1;
 
       // TODO: #7. Create selectable controls with Angular Material
-      ul { 
-        list-style: none;
-        margin: 5px 20px;
-        padding: 0;
-      }
-      
-      li {
-        margin: 10px 0;
-      }
     }
 
     .quantity {
@@ -95,6 +91,10 @@
       outline: solid 1px;
       background-color: mat.get-color-from-palette(mat.$pink-palette, 50);
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 709fc82883b9873a654697c15a2c2d45b0e409ff
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 12px;
@@ -115,8 +115,13 @@
 
     // TODO: #12. Enable HighContrast mode
     @include cdk.high-contrast() {
+<<<<<<< HEAD
       outline: solid 1px;
       background-color: mat.get-color-from-palette(mat.$light-green-palette, 50);
+=======
+      // outline: solid 1px;
+      // background-color: mat.get-color-from-palette(mat.$light-green-palette, 50);
+>>>>>>> 709fc82883b9873a654697c15a2c2d45b0e409ff
     }
   }
 }

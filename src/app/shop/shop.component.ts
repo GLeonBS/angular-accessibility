@@ -26,12 +26,17 @@ export class ShopComponent implements OnInit {
   color = 'gold';
 
   // TODO: #7. Create selectable controls with Angular Material
+<<<<<<< HEAD
   fillings: string[] = ['Bok Choy & Chili Crunch', 
                         'Tofu & Mushroom', 
                         'Chicken & Ginger', 
                         'Impossible Meat & Spinach'
                       ];
   selectedFillings: string[] = [];                       
+=======
+  fillings: string[] = ['Bok Choy & Chili Crunch', 'Tofu & Mushroom', 'Chicken & Ginger', 'Impossible Meat & Spinach'];
+  selectedFillings: string[] = [];
+>>>>>>> 709fc82883b9873a654697c15a2c2d45b0e409ff
 
   // TODO: #11. Announce changes with LiveAnnouncer
   constructor(private liveAnnouncer: LiveAnnouncer) { }
@@ -51,13 +56,19 @@ export class ShopComponent implements OnInit {
 
     // TODO: #7. Create selectable controls with Angular Material
     this.selectedFillings.forEach(filling => {
+<<<<<<< HEAD
       flavor = flavor + " " + filling
     })
+=======
+      flavor = flavor + ' ' + filling;
+    });
+>>>>>>> 709fc82883b9873a654697c15a2c2d45b0e409ff
 
     const fakePurchase = `Purchase ${this.quantity} ${flavor}dumplings in the color ${this.color}!`;
     this.liveAnnouncer.announce(fakePurchase);
     console.log(fakePurchase);
 
     // TODO: #11. Announce changes with LiveAnnouncer
+    this.liveAnnouncer.announce(fakePurchase);
   }
 }

@@ -29,7 +29,6 @@ import { MatListModule } from '@angular/material/list';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { GoogleMapsModule } from '@angular/google-maps';
-import { A11yModule } from '@angular/cdk/a11y';
 
 import { AboutComponent } from './about/about.component';
 import { ColorPickerComponent } from './shop/color-picker/color-picker.component';
@@ -40,6 +39,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { ShopComponent } from './shop/shop.component';
 
 // TODO: #9. Add the power of @angular/cdk/a11y
+import { A11yModule } from '@angular/cdk/a11y';
 
 @NgModule({
   declarations: [
