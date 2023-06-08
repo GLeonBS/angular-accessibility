@@ -14,13 +14,8 @@
  * limitations under the License.
  */
 import { LiveAnnouncer } from '@angular/cdk/a11y';
-<<<<<<< HEAD
 import { Component, EventEmitter, Inject, OnInit, Output } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-=======
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
->>>>>>> 709fc82883b9873a654697c15a2c2d45b0e409ff
 
 export interface ColorDialogData {
   color: string;
@@ -50,26 +45,15 @@ export class ColorPickerDialogComponent implements OnInit {
   ];
 
   // TODO: #11. Announce changes with LiveAnnouncer
-<<<<<<< HEAD
-  constructor(
-    public dialogRef: MatDialogRef<ColorPickerDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: ColorDialogData,
-=======
+
   constructor(public dialogRef: MatDialogRef<ColorPickerDialogComponent>,
->>>>>>> 709fc82883b9873a654697c15a2c2d45b0e409ff
     private liveAnnouncer: LiveAnnouncer) { }
 
   ngOnInit(): void { }
 
   public changeColor(color: string): void {
-<<<<<<< HEAD
-=======
-    if (color) {
-      this.recolor.emit(color);
-    }
 
     // TODO: #11. Announce changes with LiveAnnouncer
->>>>>>> 709fc82883b9873a654697c15a2c2d45b0e409ff
     this.liveAnnouncer.announce(`Select color: ${color}`);
     this.dialogRef.close();
   }
